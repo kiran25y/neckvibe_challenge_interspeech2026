@@ -1,0 +1,18 @@
+{
+  "rows_merged": 468,
+  "base_tab": {
+    "auc": 0.7508960573476704,
+    "ap": 0.3754143524017984
+  },
+  "base_mil": {
+    "auc": 0.7170609318996417,
+    "ap": 0.35821976919569404
+  },
+  "stack_oof_eval": {
+    "auc": 0.7563870967741936,
+    "ap": 0.38478663052031825
+  },
+  "tab_used": "tab_pred",
+  "mil_used": "mil_pred",
+  "notes": "QuantileTransformer(CDF) + LogisticRegression stacking on [t, m, |t-m|, t*m]."
+}

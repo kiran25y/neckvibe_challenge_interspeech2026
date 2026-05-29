@@ -1,0 +1,20 @@
+{
+  "fold_aucs": [
+    0.7723418134377038,
+    0.7303571428571428,
+    0.6472602739726028,
+    0.6884210526315789,
+    0.7403982930298719
+  ],
+  "oof_auc": 0.7170609318996417,
+  "config": {
+    "WIN_FRAMES": 240,
+    "MAX_WINDOWS_PER_SUBJECT": 24,
+    "EPOCHS": 16,
+    "BATCH_SIZE": 16,
+    "LR": 0.0007,
+    "DROPOUT": 0.3,
+    "USE_AMP": true,
+    "EXCLUDE_SINGING": true
+  }
+}

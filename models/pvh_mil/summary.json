@@ -1,0 +1,23 @@
+{
+  "fold_aucs": [
+    0.8489503328213005,
+    0.8814655172413793,
+    0.8428571428571429,
+    0.9025096525096525,
+    0.8810483870967741
+  ],
+  "oof_auc": 0.8354500167365664,
+  "oof_ap": 0.7564540131402253,
+  "config": {
+    "WIN_FRAMES": 240,
+    "MAX_WINDOWS_PER_SUBJECT": 24,
+    "EPOCHS": 14,
+    "BATCH_SIZE": 16,
+    "LR": 0.0003,
+    "DROPOUT": 0.3,
+    "USE_DAY_STATS": true,
+    "USE_CHANNEL_NORM": true,
+    "DEVICE": "cuda",
+    "USE_AMP": true
+  }
+}
