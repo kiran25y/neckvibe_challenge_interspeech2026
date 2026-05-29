@@ -1,8 +1,7 @@
-================================================================================
+
 NeckVibe Challenge Submission
 Team: Seoultech - Medisensing Inc
 Date: February 12, 2026
-================================================================================
 
 CONTENTS:
   1. pvh.py                      - PVH tabular (CatBoost) training + OOF export
@@ -14,9 +13,8 @@ CONTENTS:
   7. requirements.txt            - Python dependencies
   8. README.txt                  - This file
 
-================================================================================
 REQUIREMENTS:
-================================================================================
+
 Python 3.10+
 
 Install:
@@ -32,9 +30,9 @@ Core packages:
 
 GPU is recommended for MIL training but not required for inference.
 
-================================================================================
+
 EXPECTED DATA LAYOUT:
-================================================================================
+
 
 /workspace/NeckVibeChallenge/
 │
@@ -55,9 +53,9 @@ EXPECTED DATA LAYOUT:
         ├── Task1_PVH_detection.csv
         └── Task2_NPVH_detection.csv
 
-================================================================================
+
 PROJECT OUTPUT FOLDER STRUCTURE:
-================================================================================
+
 
 /Seoultech-Medisensing Inc/
 │
@@ -105,9 +103,9 @@ PROJECT OUTPUT FOLDER STRUCTURE:
     ├── Task1_PVH_detection.csv
     └── Task2_NPVH_detection.csv
 
-================================================================================
+
 ENSEMBLE METHOD (IMPORTANT):
-================================================================================
+
 We do NOT use a fixed weighted mean.
 
 Final predictions are generated using stacking:
@@ -123,9 +121,9 @@ Note:
 - For NPVH we prefer the rank-normalized tabular OOF ("oof_rank") due to fold scale drift.
 - For PVH we use raw tabular OOF ("oof_raw") by default.
 
-================================================================================
+
 USAGE:
-================================================================================
+
 
 1) Train Tabular Models (CatBoost)
 ---------------------------------
@@ -177,9 +175,8 @@ Outputs:
   - /workspace/final_neckvibe/submission_outputs/Task1_PVH_detection.csv
   - /workspace/final_neckvibe/submission_outputs/Task2_NPVH_detection.csv
 
-================================================================================
 EXPECTED OUTPUT FORMAT (SUBMISSION):
-================================================================================
+
 
 Task1_PVH_detection.csv:
   subjectID,pvh_probability,pvh_prediction
@@ -195,11 +192,3 @@ Task2_NPVH_detection.csv:
 
 Decision rule:
   prediction = 1 if probability >= 0.5 else 0
-
-================================================================================
-CONTACT:
-================================================================================
-For questions:
-  Seunggyu Jeoung - Medisensing Inc
-  Email: wa3229433@gmail.com
-================================================================================
